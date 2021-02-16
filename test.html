@@ -60,10 +60,10 @@
       <div class="col">
         <div id="block"></div>
       </div>
-      <div class="col">
-        <img src="pld1.png" id="pld1">
-      </div>
+	<div id="bg-clipboard">
+	<div id="clipboard" style="-webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);width:300px;height:300px;"></div>
     </div>
+	</div>
     <div id="btg">
       <div>
         <input type="button" value="R" onclick="ask('r')">
@@ -102,7 +102,9 @@
   }
   function print_rgb() { //print color
     document.getElementById("block").style.backgroundColor = "rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")";
+	document.getElementById("clipboard").style.backgroundColor = "rgb(" + rgb.r + "," + rgb.g + "," + rgb.b + ")";
     document.getElementById("block").style.color = "rgb(" + (255-rgb.r) + "," + (255-rgb.g) + "," + (255-rgb.b) + ")";
+	document.getElementById("bg-clipboard").style.backgroundColor = "rgb(" + (255-rgb.r) + "," + (255-rgb.g) + "," + (255-rgb.b) + ")";
     document.getElementById("rr").value = rgb.r;
     document.getElementById("gg").value = rgb.g;
     document.getElementById("bb").value = rgb.b;
